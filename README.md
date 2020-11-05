@@ -66,5 +66,9 @@ NEXT STEPS:
 
 NOTE:The directory $LFS is an environment variable
 
+Next step is to create the directories,I  put all the necessary steps in shell script,just execute it or copy paste it in your terminal:
+
+![directory_creation](https://github.com/AndrewMbugua/Linux-from-scratch-Sahara/blob/main/directory_creation.sh)
+
 
 
