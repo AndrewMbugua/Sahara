@@ -27,24 +27,44 @@ For the settings not mentioned here,default values were used.
 
  (a). **General**
 
-Name:Sahara
+- Name:Sahara
 
-Description:Linux from scratch system
+- Description:Linux from scratch system
 
 (b). **System**
 
-Boot order:hdd(1st)
+- Boot order:hdd(1st)
 
-Chipset:ICH9
+- Chipset:ICH9
 
-Pointing device:PS/2 Mouse and dont forget to remove auto keyboard capture once installation has been completed
+- Pointing device:PS/2 Mouse and dont forget to remove auto keyboard capture once installation has been completed
 
 (c). **Storage**
 
-Removed contoller IDE & added Gentoo ISO image
+- Removed contoller IDE & added Gentoo ISO image
 
 (d). **Network**
 
-Attached to:Bridged Adapter(to use the hosts IP range)
+- Attached to:Bridged Adapter(to use the hosts IP range)
 
-Refresh to generate new MAC Address
+- Refresh to generate new MAC Address
+
+NEXT STEPS:
+- The new LFS partition is called /dev/sda (9gig) partition n.o 1
+- 1st sectore 2048 & last sector 3,000,000
+- new partition 1 of type linux and is of size 1.4 GiB
+
+----Format partion & create an ext2 file system
+
+**$mke2fs /dev/sda1**
+
+------Mount partition
+
+**$mkdir -p /mnt/lfs**
+
+**$mount /dev/sda1 /mnt/lfs**
+
+NOTE:The directory $LFS is an environment variable
+
+
+
