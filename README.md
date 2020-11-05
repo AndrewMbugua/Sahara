@@ -1,7 +1,7 @@
 NOTE:My current linux distro is Parrot OS which is debian based.
 
 
-## Day 1 - Install Oracle virtual box
+# Day 1 - Install Oracle virtual box & Gentoo ISO
 
 command line instructions for installing Oracle virtual box:
  
@@ -17,3 +17,26 @@ command line instructions for installing Oracle virtual box:
 
  **# virtualbox**
 
+# DAY 2 - Virtual box configurations
+
+Package unpacking will take place in /usr/src DIR
+using Gentoo x86 linux files as basis for practise
+
+## Virtual box settings:
+For the settings not mentioned here,default values were used.
+
+**General**
+Name:Sahara
+Description:Linux from scratch system
+
+**System**
+Boot order:hdd(1st)
+Chipset:ICH9
+Pointing device:PS/2 Mouse
+
+**Storage**
+Removed contoller IDE & added Gentoo ISO image
+
+**Network**
+Attached to:Bridged Adapter(to use the hosts IP range)
+Refresh to generate new MAC Address
