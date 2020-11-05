@@ -25,18 +25,26 @@ using Gentoo x86 linux files as basis for practise
 ## Virtual box settings:
 For the settings not mentioned here,default values were used.
 
-**General**
+ (a). **General**
+
 Name:Sahara
+
 Description:Linux from scratch system
 
-**System**
-Boot order:hdd(1st)
-Chipset:ICH9
-Pointing device:PS/2 Mouse
+(b). **System**
 
-**Storage**
+Boot order:hdd(1st)
+
+Chipset:ICH9
+
+Pointing device:PS/2 Mouse(This sometimes brings issues and if so stick to USB tablet
+
+(c). **Storage**
+
 Removed contoller IDE & added Gentoo ISO image
 
-**Network**
+(d). **Network**
+
 Attached to:Bridged Adapter(to use the hosts IP range)
+
 Refresh to generate new MAC Address
