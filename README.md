@@ -17,7 +17,7 @@ command line instructions for installing Oracle virtual box:
 
  **# virtualbox**
 
-# DAY 2 - Virtual box configurations
+# DAY 2 - Virtual box & Partition preparation
 
 Package unpacking will take place in /usr/src DIR
 using Gentoo x86 linux files as basis for practise
