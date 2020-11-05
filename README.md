@@ -37,7 +37,7 @@ Boot order:hdd(1st)
 
 Chipset:ICH9
 
-Pointing device:PS/2 Mouse(This sometimes brings issues and if so stick to USB tablet
+Pointing device:PS/2 Mouse
 
 (c). **Storage**
 
