@@ -37,7 +37,7 @@ Boot order:hdd(1st)
 
 Chipset:ICH9
 
-Pointing device:PS/2 Mouse
+Pointing device:PS/2 Mouse and dont forget to remove auto keyboard capture once installation has been completed
 
 (c). **Storage**
 
