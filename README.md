@@ -71,7 +71,87 @@ Next step is to create the directories,I  put all the necessary steps in shell s
 ![directory_creation](https://github.com/AndrewMbugua/Linux-from-scratch-Sahara/blob/main/directory_creation.sh)
 
 
-# DAY 3
+## DAY 3 - Creating password and group files & install basix system software
 
+Create a new file $LFS/etc/passwd by running the following command:
+**echo "root:x:0:0:root:/root:/bin/bash" > $LFS/etc/passwd**
+
+creating a new $LFS/etc/group
+
+echo "root:x:0:" > $LFS/etc/group
+
+echo "bin:x:1:" >> $LFS/etc/group
+
+echo "sys:x:2:" >> $LFS/etc/group
+
+echo "kmem:x:3:" >> $LFS/etc/group
+
+echo "tty:x:4:" >> $LFS/etc/group
+
+echo "uucp:x:5:" >> $LFS/etc/group
+
+echo "daemon:x:6:" >> $LFS/etc/group
+
+echo "floppy:x:7:" >> $LFS/etc/group
+
+echo "disk:x:8:" >> $LFS/etc/group
+
+
+Copy proc devices **N/B:** $LFS/proc/devices won't update when the kernel updates the /proc/devices
+
+The /dev and proc file systems are confusing to new linux users so I chose to throw in an article about it:
+ ![Using the /dev and /proc file systems](https://www.linux.com/news/using-dev-and-proc-file-systems/)
+ 
+Ive also added another one on optimisation flags ![Compiler optimisation](https://elinux.org/Compiler_Optimization)
+and ![Optimisation in GCC](https://www.linuxjournal.com/article/7269)
+
+**Now to install basic system software** 
+
+Advice from author:
+
+"Please keep in mind that if you find that a package doesn't compile and gives errors like "segmentation fault,
+core dumped" it's most likely got to do with these compiler optimizations. Try lowering the optimizing level
+by changing −O3 to −O2. If that doesn't work try −O or leave it out all together. Also try changing the −mcpu
+and −march variables. Compilers are very sensitive to certain hardware too. Bad memory can cause
+compilation problems when a high level of optimization is used, like the −O3 setting. The fact that I don't
+have any problems compiling everything with −O3 doesn't mean you won't have any problems either.
+Another problem can be the Binutils version that's installed on your system which often causes compilation
+problems in Glibc (most noticable in RedHat because RedHat often uses beta software which aren't always
+very stable."
+
+
+I plan to install the most common & some addition sys software
+
+(a). GNU compiler collection(GCC)-includes front-ends for C,C++,Objective-c,Fortran,Ada,Go & D
+(b). Babel-Javascript compiler
+(c). Rust compiler
+
+
+perform $ls $LFS/root/.bash_profile to know whether bash profile exists
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## End remarks
+
+This is a hands-on LFS project that I attempted inorder to gain a deeper understanding of Linux,I used the instructions detailed in the **linux from scratch** book that I have also added to this repository.
+
+Enjoy building your own LFS,IT WAS FUN!,challenging but FUN! 
+cheerio (:wave:)
+
+Author:Andrew Precious Mbugua
 
 
