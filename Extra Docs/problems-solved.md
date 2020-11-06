@@ -14,3 +14,6 @@ Solution:Remounted the partition
 
 **$mount -o remount,rw /dev/sda1 /mnt/lfs**
  
+3. writing  $cp /proc/devices $LFS/proc spewed an output:
+
+   "cp /proc/devices and /proc/devices are the same file" though I now choose to overlook it. 
