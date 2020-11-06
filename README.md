@@ -71,4 +71,7 @@ Next step is to create the directories,I  put all the necessary steps in shell s
 ![directory_creation](https://github.com/AndrewMbugua/Linux-from-scratch-Sahara/blob/main/directory_creation.sh)
 
 
+# DAY 3
+
+
 
