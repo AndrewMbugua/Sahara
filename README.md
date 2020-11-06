@@ -71,7 +71,7 @@ Next step is to create the directories,I  put all the necessary steps in shell s
 ![directory_creation](https://github.com/AndrewMbugua/Linux-from-scratch-Sahara/blob/main/directory_creation.sh)
 
 
-## DAY 3 - Creating password and group files & install basix system software
+# DAY 3 - Creating password and group files & install basix system software
 
 Create a new file $LFS/etc/passwd by running the following command:
 **echo "root:x:0:0:root:/root:/bin/bash" > $LFS/etc/passwd**
