@@ -96,6 +96,8 @@ echo "floppy:x:7:" >> $LFS/etc/group
 
 echo "disk:x:8:" >> $LFS/etc/group
 
+**N/B** the red x that you see up there are colons(:) therefore replace it with a :
+
 
 Copy proc devices **N/B:** $LFS/proc/devices won't update when the kernel updates the /proc/devices
 
