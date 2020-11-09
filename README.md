@@ -215,7 +215,7 @@ This last bit draws instructions outlined in the guide,as the aithor says,"If yo
 **$ cp System.map /boo**
 
 
-###Adding an entry to LILO
+**Adding an entry to LILO**
 Not that i know what this is as of this writing LOL but lets continue
 
 
@@ -229,36 +229,6 @@ read−only
 Now update the boot loader
 
 **$ lilo**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## End remarks
