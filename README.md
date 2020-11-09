@@ -132,6 +132,120 @@ I plan to install the most common & some addition sys software
 perform $ls $LFS/root/.bash_profile to know whether bash profile exists
 
 
+# Day 4 - Creating system boot scrips,Install kernel,test system
+Create new directiories that will be used by the boot scripts
+
+**$ cd /etc**
+
+**etc$ mkdir sysconfig rc0.d rc1.d rc2.d rc3.d**
+
+**etc$ mkdir rc4.d rc5.d rc6.d init.d rcS.d**
+
+The next steps are well outlined in the attached LFS guide:
+- Create the rc script
+- Create the rcS script
+- Create the funtions script
+- Create the checkfs script
+- Create the halt script
+- Create the loadkeys script
+- Create the mountfs script
+- Create the reboot script
+- Create the sendsignals script
+- Create the setclock script
+- Create the /etc/sysconfig/clock file
+- Create the sysklogd script
+- Create the umountfs script
+- Setting up symlinks and permissions
+- Creating the /etc/fstab file
+
+Setting up basic networking
+
+Install netkit-base tools
+
+**$ ./configure −−prefix=/usr**
+
+**$ make**
+
+**$ make install**
+
+**$ cd etc.sample**
+
+**$ cp services protocols /etc**
+
+Install Net tools
+
+**$ make**
+
+**$ make install**
+
+The next steps are well outlined in the attached LFS guide:
+- Create network boot scripts
+- Set up permissions and symlink
+- Create the /etc/sysconfig/network file
+- Create the /etc/hosts file
+- Create the /etc/init.d/ethnet script
+- Editing the /etc/sysconfig/network file
+- Setting up permissions and symlink
+
+And now for what I think is the whale in all of this
+
+**Making the LFS system bootable**
+
+I have chosen to attach an article that explains what a kernel is [Kernel in operating systems](https://www.geeksforgeeks.org/kernel-in-operating-system/)
+
+
+This last bit draws instructions outlined in the guide,as the aithor says,"If you dont like the way the kernel is configured,read the README file and find out what other options there are"
+
+**$ Installing a kernel**
+
+**$ make mrproper**
+
+**$ make menuconfig**
+
+**$ make dep**
+
+**$ make bzImage**
+
+**$ make modules**
+
+**$ make modules_install**
+
+**$ cp arch/i386/boot/bzImage /boot/lfskernel**
+
+**$ cp System.map /boo**
+
+
+###Adding an entry to LILO
+Not that i know what this is as of this writing LOL but lets continue
+
+
+Add the following
+lines to lilo.conf:
+image=/boot/lfskernel
+label=lfs
+root=<sda1>
+read−only
+
+Now update the boot loader
+
+**$ lilo**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
