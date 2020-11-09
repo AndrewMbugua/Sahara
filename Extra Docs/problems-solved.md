@@ -16,4 +16,4 @@ Solution:Remounted the partition
  
 3. writing  $cp /proc/devices $LFS/proc spewed an output:
 
-   "cp /proc/devices and /proc/devices are the same file" though I now choose to overlook it. 
+"cp /proc/devices and /proc/devices are the same file" though I now choose to overlook it. 
