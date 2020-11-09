@@ -132,7 +132,7 @@ I plan to install the most common & some addition sys software
 perform $ls $LFS/root/.bash_profile to know whether bash profile exists
 
 
-# Day 4 - Creating system boot scrips,Install kernel,test system
+# Day 4 - Creating system boot scripts,Install kernel,test system
 Create new directiories that will be used by the boot scripts
 
 **$ cd /etc**
@@ -155,8 +155,8 @@ The next steps are well outlined in the attached LFS guide:
 - Create the /etc/sysconfig/clock file
 - Create the sysklogd script
 - Create the umountfs script
-- Setting up symlinks and permissions
-- Creating the /etc/fstab file
+- Set up symlinks and permissions
+- Create the /etc/fstab file
 
 Setting up basic networking
 
