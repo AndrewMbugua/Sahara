@@ -1,0 +1,1 @@
+ The BLFS Bootscripts package contains the init scripts that are used throughout the book. It is assumed that you will be using the blfs-bootscripts package in conjuction with a compatible lfs-bootscripts package.
