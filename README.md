@@ -123,11 +123,13 @@ problems in Glibc (most noticable in RedHat because RedHat often uses beta softw
 very stable."
 
 
-I plan to install the most common & some addition sys software
+I plan to install the most common & some addition system software
 
-(a). GNU compiler collection(GCC)-includes front-ends for C,C++,Objective-c,Fortran,Ada,Go & D
-(b). Babel-Javascript compiler
-(c). Rust compiler
+(a). GNU compiler collection(GCC)-includes front-ends for C,C++,Objective-c,Fortran,Ada,Go & D.
+
+(b). Babel-Javascript compiler.
+
+(c). Rust compiler.
 
 
 perform $ls $LFS/root/.bash_profile to know whether bash profile exists
