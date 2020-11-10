@@ -1,5 +1,6 @@
 NOTE:My current linux distro is Parrot OS which is debian based.
-
+What you will see is a simple documentation of the steps I took,my thoughts,the problems I faced and additional resources like link to articles and scripts
+Rectifications and additions are welcomed.
 
 # Day 1 - Install Oracle virtual box & Gentoo ISO
 
