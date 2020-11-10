@@ -161,7 +161,7 @@ The next steps are well outlined in the attached LFS guide:
 - Set up symlinks and permissions
 - Create the /etc/fstab file
 
-Setting up basic networking
+**Setting up basic networking**
 
 Install netkit-base tools
 
@@ -219,8 +219,7 @@ This last bit draws instructions outlined in the guide,as the aithor says,"If yo
 
 
 **Adding an entry to LILO**
-Not that i know what this is as of this writing LOL but lets continue
-
+Not that I know what this is as of this writing LOL but lets continue
 
 Add the following
 lines to lilo.conf:
@@ -228,6 +227,8 @@ image=/boot/lfskernel
 label=lfs
 root=<sda1>
 read−only
+ 
+Where sda1 is my partition name
 
 Now update the boot loader
 
