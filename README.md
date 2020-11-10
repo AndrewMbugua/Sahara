@@ -16,7 +16,7 @@ command line instructions for installing Oracle virtual box:
 
 **$ sudo apt-get install virtualbox-6.1**
 
- **# virtualbox**
+ **$ vrtualbox**
 
 # DAY 2 - Virtual box & Partition preparation
 
