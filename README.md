@@ -237,12 +237,11 @@ Now update the boot loader
 
 ## End remarks
 
-This is a hands-on LFS project that I attempted inorder to gain a deeper understanding of Linux,I used the instructions detailed in the **linux from scratch** book that I have also added to this repository.
+This is a hands-on LFS project that I attempted in-order to gain a deeper understanding of the Linux O.S,I used the instructions detailed in the **linux from scratch** book that I have also added to this repository.
 
 Enjoy building your own LFS,IT WAS FUN!,challenging but FUN! 
 cheerio (:wave:)
 
 
 **Author:Andrew Precious Mbugua**
-
 
