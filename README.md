@@ -5,19 +5,19 @@ Rectifications and additions are welcomed.
 # Day 1 - Install Oracle virtual box & Gentoo ISO
 
 command line instructions for installing Oracle virtual box:
- 
-**$ wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -**
+```
+$ wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 
-**$ wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -**
+$ wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 
-**$ sudo apt install software-properties-common**
+$ sudo apt install software-properties-common
 
-**$ sudo add-apt-repository "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib**
+$ sudo add-apt-repository "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib
 
-**$ sudo apt-get install virtualbox-6.1**
+$ sudo apt-get install virtualbox-6.1
 
- **$ vrtualbox**
-
+$ vrtualbox
+```
 # DAY 2 - Virtual box & Partition preparation
 
 Package unpacking will take place in /usr/src DIR
@@ -57,28 +57,29 @@ NEXT STEPS:
 
 ----Format partion & create an ext2 file system
 
-**$mke2fs /dev/sda1**
+```$ mke2fs /dev/sda1```
 
 ------Mount partition
 
-**$mkdir -p /mnt/lfs**
+```$ mkdir -p /mnt/lfs```
 
-**$mount /dev/sda1 /mnt/lfs**
+```$ mount /dev/sda1 /mnt/lfs```
 
 NOTE:The directory $LFS is an environment variable
 
 Next step is to create the directories,I  put all the necessary steps in shell script,just execute it or copy paste it in your terminal:
 
-![directory_creation](https://github.com/AndrewMbugua/Linux-from-scratch-Sahara/blob/main/directory_creation.sh)
+[directory_creation](https://github.com/AndrewMbugua/Linux-from-scratch-Sahara/blob/main/directory_creation.sh)
 
 
 # DAY 3 - Creating password and group files & install basic system software
 
 Create a new file $LFS/etc/passwd by running the following command:
-**echo "root:x:0:0:root:/root:/bin/bash" > $LFS/etc/passwd**
+
+``echo "root:x:0:0:root:/root:/bin/bash" > $LFS/etc/passwd``
 
 creating a new $LFS/etc/group
-
+```
 echo "root:x:0:" > $LFS/etc/group
 
 echo "bin:x:1:" >> $LFS/etc/group
@@ -96,6 +97,7 @@ echo "daemon:x:6:" >> $LFS/etc/group
 echo "floppy:x:7:" >> $LFS/etc/group
 
 echo "disk:x:8:" >> $LFS/etc/group
+```
 
 **N/B the red x that you see up there are colons(:) therefore replace it with a :**
 
@@ -103,10 +105,10 @@ echo "disk:x:8:" >> $LFS/etc/group
 Copy proc devices **N/B:** $LFS/proc/devices won't update when the kernel updates the /proc/devices
 
 The /dev and proc file systems are confusing to new linux users so I chose to throw in an article about it:
- ![Using the /dev and /proc file systems](https://www.linux.com/news/using-dev-and-proc-file-systems/)
+ [Using the /dev and /proc file systems](https://www.linux.com/news/using-dev-and-proc-file-systems/)
  
-Ive also added another one on optimisation flags ![Compiler optimisation](https://elinux.org/Compiler_Optimization)
-and ![Optimisation in GCC](https://www.linuxjournal.com/article/7269)
+Ive also added another one on optimisation flags [Compiler optimisation](https://elinux.org/Compiler_Optimization)
+and [Optimisation in GCC](https://www.linuxjournal.com/article/7269)
 
 **Now to install basic system software** 
 
@@ -115,8 +117,9 @@ Advice from author:
 "Please keep in mind that if you find that a package doesn't compile and gives errors like "segmentation fault,
 core dumped" it's most likely got to do with these compiler optimizations. Try lowering the optimizing level
 by changing −O3 to −O2. If that doesn't work try −O or leave it out all together. Also try changing the −mcpu
-and −march variables. Compilers are very sensitive to certain hardware too. Bad memory can cause
-compilation problems when a high level of optimization is used, like the −O3 setting. The fact that I don't
+and −march variables. Compilers are very sensitive to certain hardware too.
+
+Bad memory can cause compilation problems when a high level of optimization is used, like the −O3 setting. The fact that I don't
 have any problems compiling everything with −O3 doesn't mean you won't have any problems either.
 Another problem can be the Binutils version that's installed on your system which often causes compilation
 problems in Glibc (most noticable in RedHat because RedHat often uses beta software which aren't always
@@ -132,17 +135,17 @@ I plan to install the most common & some addition system software
 (c). Rust compiler.
 
 
-perform $ls $LFS/root/.bash_profile to know whether bash profile exists
+perform ```$ ls $LFS/root/.bash_profile``` to know whether bash profile exists
 
 
 # Day 4 - Creating system boot scripts,Install kernel,test system
 Create new directiories that will be used by the boot scripts
 
-**$ cd /etc**
+```$ cd /etc```
 
-**etc$ mkdir sysconfig rc0.d rc1.d rc2.d rc3.d**
+```etc$ mkdir sysconfig rc0.d rc1.d rc2.d rc3.d```
 
-**etc$ mkdir rc4.d rc5.d rc6.d init.d rcS.d**
+```etc$ mkdir rc4.d rc5.d rc6.d init.d rcS.d```
 
 The next steps are well outlined in the attached LFS guide:
 - Create the rc script
@@ -164,22 +167,23 @@ The next steps are well outlined in the attached LFS guide:
 **Setting up basic networking**
 
 Install netkit-base tools
+```
+$ ./configure −−prefix=/usr
 
-**$ ./configure −−prefix=/usr**
+$ make
 
-**$ make**
+$ make install
 
-**$ make install**
+$ cd etc.sample
 
-**$ cd etc.sample**
-
-**$ cp services protocols /etc**
+$ cp services protocols /etc
+```
 
 Install Net tools
 
-**$ make**
+```$ make```
 
-**$ make install**
+```$ make install```
 
 The next steps are well outlined in the attached LFS guide:
 - Create network boot scripts
@@ -198,25 +202,25 @@ I have chosen to attach an article that explains what a kernel is [Kernel in ope
 
 
 This last bit draws instructions outlined in the guide,as the aithor says,"If you dont like the way the kernel is configured,read the README file and find out what other options there are"
+```
+$ Installing a kernel
 
-**$ Installing a kernel**
+$ make mrproper
 
-**$ make mrproper**
+$ make menuconfig
 
-**$ make menuconfig**
+$ make dep
 
-**$ make dep**
+$ make bzImage
 
-**$ make bzImage**
+$ make modules
 
-**$ make modules**
+$ make modules_install
 
-**$ make modules_install**
+$ cp arch/i386/boot/bzImage /boot/lfskernel
 
-**$ cp arch/i386/boot/bzImage /boot/lfskernel**
-
-**$ cp System.map /boo**
-
+$ cp System.map /boo
+```
 
 **Adding an entry to LILO**
 Not that I know what this is as of this writing LOL but lets continue
