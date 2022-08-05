@@ -247,5 +247,5 @@ Enjoy building your own LFS,IT WAS FUN!,challenging but FUN!
 cheerio (:wave:)
 
 
-**Author:Andrew Precious Mbugua**
+**Author: Andrew Precious Mbugua**
 
